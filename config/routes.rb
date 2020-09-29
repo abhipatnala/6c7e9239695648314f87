@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
- namespace :api do
-  resources :user,  :except => [:index] 
-  get 'users', to: 'user#index'
-  get 'typeahead/:input', to: 'user#typeahead'
+  namespace :api do
+    resources :user,  :except => [:index] 
+    get 'users', to: 'user#index'
+    get 'typeahead/:input', to: 'user#typeahead'
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
